@@ -1,0 +1,30 @@
+.cards{
+    display: flex;
+}
+.news-article-image {
+    height: 200px;
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.news-card {
+    width: 400px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 1px #a19e9e;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(218, 218, 218);
+}
+.article-title{
+    font-size: 20px;
+}
+.read-more{
+   text-decoration: none;
+   color: black;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
