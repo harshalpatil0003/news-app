@@ -4,10 +4,10 @@ import Newscards from '../../components/news-cards'
 import './Home.css'
 function Home() {
     const [news, setNews] = useState([])
-    const [searchquery, setsearchquery] = useState("xiomi")
+    const [searchquery, setsearchquery] = useState("Apple")
     const loadnews = async () => {
         try {
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=${searchquery}&from=2024-07-31&to=2024-07-31&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`)
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?sources=${searchquery}&apiKey=${process.env.REACT_APP_API_KEY}`)
             setNews(response.data.articles)
         }
         catch (error) {
@@ -15,13 +15,13 @@ function Home() {
         }
 
     }
-    // useEffect(() => {
-    //     loadnews()
-    // }, [searchquery])
-
     useEffect(() => {
-        loadnews();
-    }, [loadnews]); 
+        loadnews()
+    }, [searchquery])
+
+    // useEffect(() => {
+    //     loadnews();
+    // }, [loadnews]); 
     return (
         <div>
             <h1>News App</h1>
