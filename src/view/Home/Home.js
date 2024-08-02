@@ -24,12 +24,12 @@ function Home() {
     // }, [loadnews]); 
     return (
         <div>
-            <h1>News App</h1>
+            <h1 className="text-center">News App</h1>
             <input type="text" value={searchquery}
                 onChange={(e) => {
                     setsearchquery(e.target.value)
                 }}
-                className="form-control" />
+                className="form-control mx-auto" />
             <div className="card-container">
                 {
 
