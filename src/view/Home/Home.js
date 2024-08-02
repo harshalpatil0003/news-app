@@ -15,9 +15,13 @@ function Home() {
         }
 
     }
+    // useEffect(() => {
+    //     loadnews()
+    // }, [searchquery])
+
     useEffect(() => {
-        loadnews()
-    }, [searchquery])
+        loadnews();
+    }, [loadnews]); 
     return (
         <div>
             <h1>News App</h1>
